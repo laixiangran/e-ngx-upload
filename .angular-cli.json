@@ -1,0 +1,30 @@
+{
+	"apps": [
+		{
+			"root": "example",
+			"outDir": "demo",
+			"assets": [
+				"assets",
+				"favicon.ico"
+			],
+			"index": "index.html",
+			"main": "main.ts",
+			"polyfills": "polyfills.ts",
+			"tsconfig": "tsconfig.json",
+			"styles": [
+				"./styles.scss",
+				"../node_modules/font-awesome/css/font-awesome.min.css"
+			],
+			"scripts": [],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"dev": "environments/environment.ts",
+				"test": "environments/environment.test.ts",
+				"prod": "environments/environment.prod.ts"
+			}
+		}
+	],
+	"defaults": {
+		"styleExt": "scss"
+	}
+}

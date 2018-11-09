@@ -1,0 +1,16 @@
+.e-ngx-wrapper {
+	.e-ngx-upload {
+		.drag-area {
+			width: 1000px;
+			height: 300px;
+			border: 1px solid #ccc;
+			margin: 16px auto;
+			text-align: center;
+			user-select: none;
+
+			&.active {
+				box-shadow: 0 0 10px 2px #ccc;
+			}
+		}
+	}
+}

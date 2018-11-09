@@ -1,0 +1,21 @@
+<div class="e-ngx-wrapper">
+	<div class="e-ngx-upload">
+		<div class="drag-area" [class.active]="isDragIn && !droped" (drop)="dropHandler($event)" (dragleave)="dragleaveHandler()" (dragenter)="dragenterHandler()">
+			<p class="drapupload" *ngIf="!itemList.length && !droped">拖拽上传</p>
+			<ul *ngIf="itemList.length">
+				<li *ngFor="let item of itemList;">
+					<ng-container *ngIf="item.md5 && item.chunks && item.file">
+						<div class="upload-item-wrap">
+							<div class="item">
+								<span>{{item.file.name}}</span>
+								<span>{{item.file.size + ' b'}}</span>
+								<span>{{item.md5}}</span>
+							</div>
+						</div>
+					</ng-container>
+				</li>
+			</ul>
+			<p class="computed" *ngIf="droped && itemList.length != fileLength">正在计算文件的md5，请稍后...</p>
+		</div>
+	</div>
+</div>
